@@ -170,55 +170,24 @@ li {
 /*---------------------
 font-size
 ---------------------*/
-
-/* base 16px */
-html {
-    font-size: 16px;
-}
-
-body {
-    font-size: 1rem;
-}
-
-.pc-f-12 {
-    font-size: 0.75rem;
-}
-
-.pc-f-14 {
-    font-size: 0.875rem;
-}
-
-.pc-f-18 {
-    font-size: 1.125rem;
-}
-
-.pc-f-20 {
-    font-size: 1.25rem;
-}
-
-.pc-f-22 {
-    font-size: 1.375rem;
-}
-
-.pc-f-25 {
-    font-size: 1.5625rem;
-}
-
-.pc-f-30 {
-    font-size: 1.875rem;
-}
-
-.pc-f-35 {
-    font-size: 2.1875rem;
-}
-
-.pc-f-40 {
-    font-size: 2.5rem;
-}
-
-.pc-f-60 {
-    font-size: 3.75rem;
-}
+/* base 18px */
+html { font-size: 18px;}
+body { font-size: 1rem;}
+.pc-f-10 { font-size: 0.55555555555556rem;}
+.pc-f-12 { font-size: 0.66666666666667rem;}
+.pc-f-14 { font-size: 0.77777777777778rem;}
+.pc-f-15 { font-size: 0.83333333333333rem;}
+.pc-f-16 { font-size: 0.88888888888889rem;}
+.pc-f-20 { font-size: 1.1111111111111rem;}
+.pc-f-22 { font-size: 1.222222222222222rem;}
+.pc-f-23 { font-size: 1.2777777777778rem;}
+.pc-f-24 { font-size: 1.3333333333333rem;}
+.pc-f-25 { font-size: 1.3888888888889rem;}
+.pc-f-26 { font-size: 1.4444444444444rem;}
+.pc-f-28 { font-size: 1.555555555555556rem;}
+.pc-f-30 { font-size: 1.6666666666667rem;}
+.pc-f-32 { font-size: 1.7777777777778rem;}
+.pc-f-40 { font-size: 2.2222222222222rem;}
 
 /*---------------------
 font-weight
@@ -226,14 +195,8 @@ font-family
 ---------------------*/
 /* 欧フォント→和フォント指定で混植 */
 body {
-    font-family:
-        "Helvetica Neue",
-        Arial,
-        "Hiragino Kaku Gothic ProN",
-        "Hiragino Sans",
-        Meiryo,
-        sans-serif;
-    font-size: 1rem;
+    font-family: 'Avenir', 'ヒラギノ角ゴシック', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
+    color: #333;
 }
 
 .bold {
@@ -295,46 +258,20 @@ body {
 
 @media screen and (max-width: px) {
 
-    /* base 16px */
-    .sp-f-12 {
-        font-size: 0.75rem !important;
-    }
-
-    .sp-f-14 {
-        font-size: 0.875rem !important;
-    }
-
-    .sp-f-18 {
-        font-size: 1.125rem !important;
-    }
-
-    .sp-f-20 {
-        font-size: 1.25rem !important;
-    }
-
-    .sp-f-22 {
-        font-size: 1.375rem !important;
-    }
-
-    .sp-f-25 {
-        font-size: 1.5625rem !important;
-    }
-
-    .sp-f-30 {
-        font-size: 1.875rem !important;
-    }
-
-    .sp-f-35 {
-        font-size: 2.1875rem !important;
-    }
-
-    .sp-f-40 {
-        font-size: 2.5rem !important;
-    }
-
-    .sp-f-60 {
-        font-size: 3.75rem !important;
-    }
+     /* base 18px */
+    .sp-f-10 { font-size: 0.55555555555556rem !important;}
+    .sp-f-12 { font-size: 0.66666666666667rem !important;}
+    .sp-f-14 { font-size: 0.77777777777778rem !important;}
+    .sp-f-15 { font-size: 0.83333333333333rem !important;}
+    .sp-f-16 { font-size: 0.88888888888889rem !important;}
+    .sp-f-20 { font-size: 1.1111111111111rem !important;}
+    .sp-f-23 { font-size: 1.2777777777778rem !important;}
+    .sp-f-24 { font-size: 1.3333333333333rem !important;}
+    .sp-f-25 { font-size: 1.3888888888889rem !important;}
+    .sp-f-26 { font-size: 1.4444444444444rem !important;}
+    .sp-f-30 { font-size: 1.6666666666667rem !important;}
+    .sp-f-32 { font-size: 1.7777777777778rem !important;}
+    .sp-f-40 { font-size: 2.2222222222222rem !important;}
 
     .flex-sp-bl {
         display: block;
