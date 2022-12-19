@@ -1,16 +1,14 @@
 @charset "UTF-8";
 /*---------------------
- openbtn
- ---------------------*/
+    openbtn
+    ---------------------*/
 .drawer {
   position: fixed;
   right: 0;
 }
-
 .drawer-hidden {
   display: none;
 }
-
 .drawer-open {
   background: #fcc;
   display: flex;
@@ -22,10 +20,9 @@
   z-index: 100;
   cursor: pointer;
 }
-
 .drawer-open span,
-.drawer-open span::before,
-.drawer-open span::after {
+.drawer-open span::after,
+.drawer-open span::before {
   content: "";
   display: block;
   height: 3px;
@@ -35,11 +32,9 @@
   transition: 0.4s;
   position: absolute;
 }
-
 .drawer-open span::before {
   bottom: 8px;
 }
-
 .drawer-open span::after {
   top: 8px;
 }
@@ -59,8 +54,8 @@
 }
 
 /*---------------------
- g-nav
- ---------------------*/
+    g-nav
+    ---------------------*/
 #g-nav {
   background: #fcc;
   position: fixed;
@@ -255,7 +250,7 @@
   }
   #first #page-top::before {
     border-top: solid 0.2rem;
-    left: 0px;
+    left: 0;
     width: 20px;
   }
 }/*# sourceMappingURL=stylesheet.css.map */
