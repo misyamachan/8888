@@ -1,81 +1,410 @@
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+@charset "UTF-8";
+
+/*---------------------
+Reset
+---------------------*/
+/*
+  Josh's Custom CSS Resethttps://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
 body {
-    line-height:1;
+    height: 100%;
 }
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
-nav ul {
-    list-style:none;
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
 }
-blockquote, q {
-    quotes:none;
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
 }
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*---------------------
+all
+---------------------*/
+html {
+    font-size: 16px;
+}
+
 a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+    text-decoration: none;
 }
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
+
+a:focus {
+    outline: none;
 }
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
+
+a:hover {
+    opacity: 0.8;
 }
-del {
-    text-decoration: line-through;
+
+a:active {
+    color: inherit;
 }
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
+
+a:visited {
+    color: inherit;
 }
-table {
-    border-collapse:collapse;
-    border-spacing:0;
+
+ul,
+ol,
+dl,
+dt,
+dd,
+li {
+    list-style: none;
 }
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-input, select {
-    vertical-align:middle;
+
+.flex,
+.flex-sp-bl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-wp {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex-jc-e {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.flex-jc-c {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.flex-jc-sb {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.flex-al-c {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex-dl-c {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.calc-2 {
+    width: calc(100% / 2);
+}
+
+.calc-3 {
+    width: calc(100% / 3);
+}
+
+.pc_hide {
+    display: none;
+}
+
+.sp_hide {
+    display: block;
+}
+
+.text-c {
+    text-align: center;
+}
+
+.text-r {
+    text-align: right;
+}
+
+/*---------------------
+font-size
+---------------------*/
+
+/* base 16px */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+}
+
+.pc-f-12 {
+    font-size: 0.75rem;
+}
+
+.pc-f-14 {
+    font-size: 0.875rem;
+}
+
+.pc-f-18 {
+    font-size: 1.125rem;
+}
+
+.pc-f-20 {
+    font-size: 1.25rem;
+}
+
+.pc-f-22 {
+    font-size: 1.375rem;
+}
+
+.pc-f-25 {
+    font-size: 1.5625rem;
+}
+
+.pc-f-30 {
+    font-size: 1.875rem;
+}
+
+.pc-f-35 {
+    font-size: 2.1875rem;
+}
+
+.pc-f-40 {
+    font-size: 2.5rem;
+}
+
+.pc-f-60 {
+    font-size: 3.75rem;
+}
+
+/*---------------------
+font-weight
+font-family
+---------------------*/
+/* 欧フォント→和フォント指定で混植 */
+body {
+    font-family:
+        "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+    font-size: 1rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* margin-bottom */
+.mb-0 {
+    margin-bottom: 0px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.mb-35 {
+    margin-bottom: 35px !important;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
+.mb-45 {
+    margin-bottom: 45px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+.mb-55 {
+    margin-bottom: 55px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
+}
+
+.mb-80 {
+    margin-bottom: 80px !important;
+}
+
+.mb-105 {
+    margin-bottom: 105px !important;
+}
+
+@media screen and (max-width: px) {
+
+    /* base 16px */
+    .sp-f-12 {
+        font-size: 0.75rem !important;
+    }
+
+    .sp-f-14 {
+        font-size: 0.875rem !important;
+    }
+
+    .sp-f-18 {
+        font-size: 1.125rem !important;
+    }
+
+    .sp-f-20 {
+        font-size: 1.25rem !important;
+    }
+
+    .sp-f-22 {
+        font-size: 1.375rem !important;
+    }
+
+    .sp-f-25 {
+        font-size: 1.5625rem !important;
+    }
+
+    .sp-f-30 {
+        font-size: 1.875rem !important;
+    }
+
+    .sp-f-35 {
+        font-size: 2.1875rem !important;
+    }
+
+    .sp-f-40 {
+        font-size: 2.5rem !important;
+    }
+
+    .sp-f-60 {
+        font-size: 3.75rem !important;
+    }
+
+    .flex-sp-bl {
+        display: block;
+    }
+
+    .flex-sp-dl-c {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .sp-order-2 {
+        order: 2;
+    }
+
+    .calc-2,
+    .calc-3 {
+        width: 100%;
+    }
+
+    .pc_hide {
+        display: block;
+    }
+
+    .sp_hide {
+        display: none;
+    }
+
+    .mb-10,
+    .mb-15,
+    .mb-20,
+    .mb-25,
+    .mb-30,
+    .mb-35,
+    .mb-40,
+    .mb-45,
+    .mb-50,
+    .mb-55,
+    .mb-60,
+    .mb-80,
+    .mb-105 {
+        margin-bottom: 0 !important;
+    }
+
+    .sp-mb-15 {
+        margin-bottom: 15px !important;
+    }
+
+    .sp-mb-20 {
+        margin-bottom: 20px !important;
+    }
+
+    .sp-mb-25 {
+        margin-bottom: 25px !important;
+    }
+
+    .sp-mb-30 {
+        margin-bottom: 30px !important;
+    }
+
+    .sp-mb-35 {
+        margin-bottom: 35px !important;
+    }
+
+    .sp-mb-40 {
+        margin-bottom: 40px !important;
+    }
+
+    .sp-mb-55 {
+        margin-bottom: 55px !important;
+    }
 }
