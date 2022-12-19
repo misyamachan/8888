@@ -86,8 +86,11 @@
     text-align: center;
 }
 
-#index {}
-#first {
+#index {
+
+}
+
+#old {
     body {
         width: 100vw;
         overflow-x: hidden;
@@ -253,11 +256,11 @@
     }
 }
 
-#second {}
+#new {}
 
 @media screen and (max-width:480px) {
 
-    #first {
+    #old {
         p {
             font-size: 0.9em;
             line-height: 2em;

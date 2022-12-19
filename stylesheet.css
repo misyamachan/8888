@@ -84,26 +84,26 @@
   text-align: center;
 }
 
-#first body {
+#old body {
   width: 100vw;
   overflow-x: hidden;
   background: white;
   font-family: "Avenir", "ヒラギノ角ゴシック", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
 }
-#first h1,
-#first h2,
-#first h3,
-#first p {
+#old h1,
+#old h2,
+#old h3,
+#old p {
   text-align: center;
 }
-#first p {
+#old p {
   line-height: 40px;
   letter-spacing: 0.1em;
 }
-#first span {
+#old span {
   display: inline-block;
 }
-#first .top_image {
+#old .top_image {
   position: relative;
   height: 70vh;
   display: flex;
@@ -111,35 +111,35 @@
   align-items: flex-start;
   overflow: hidden;
 }
-#first .top_image > img {
+#old .top_image > img {
   height: 100%;
 }
-#first .top_text {
+#old .top_text {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100vw;
 }
-#first h1 {
+#old h1 {
   margin-top: 20px;
   display: inline-block;
   width: 100vw;
   font-size: 2.5rem;
   line-height: 3rem;
 }
-#first .top_text_item2 {
+#old .top_text_item2 {
   display: inline-block;
   width: 450px;
   margin-bottom: 50px;
 }
-#first h2 {
+#old h2 {
   margin-top: 2rem;
   font-size: 4.5rem;
   border-bottom: solid 10px black;
   line-height: 40px;
   margin-bottom: 2rem;
 }
-#first .works_item {
+#old .works_item {
   margin-top: 5rem;
   position: relative;
   width: 100vw;
@@ -149,7 +149,7 @@
   align-items: center;
   margin-bottom: 5rem;
 }
-#first .works_image {
+#old .works_image {
   position: relative;
   display: flex;
   justify-content: center;
@@ -157,17 +157,17 @@
   max-width: 700px;
   max-height: 700px;
 }
-#first .works_image > a > img {
+#old .works_image > a > img {
   width: 100%;
   height: 100%;
 }
-#first .works_text {
+#old .works_text {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 500px;
 }
-#first h3 {
+#old h3 {
   display: inline-block;
   margin-top: 20px;
   font-size: 2.5rem;
@@ -175,11 +175,11 @@
   border-bottom: solid 5px;
   margin-bottom: 20px;
 }
-#first .works_text_item2 {
+#old .works_text_item2 {
   display: inline-block;
   width: 420px;
 }
-#first #page-top {
+#old #page-top {
   position: fixed;
   right: 40px;
   bottom: 50px;
@@ -193,10 +193,10 @@
   padding: 0 0 0 30px;
   border-top: solid 4px;
 }
-#first #page-top:hover {
+#old #page-top:hover {
   color: black;
 }
-#first #page-top::before {
+#old #page-top::before {
   content: "";
   display: block;
   position: absolute;
@@ -207,48 +207,48 @@
   transform: rotate(35deg);
   transform-origin: left top;
 }
-#first .lightbox {
+#old .lightbox {
   position: fixed !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
 }
 
 @media screen and (max-width: 480px) {
-  #first p {
+  #old p {
     font-size: 0.9em;
     line-height: 2em;
   }
-  #first .works_text {
+  #old .works_text {
     width: 450px;
     margin-top: 15px;
   }
-  #first .works_text_item2 {
+  #old .works_text_item2 {
     width: 320px;
   }
-  #first h1 {
+  #old h1 {
     font-size: 2.5em;
     margin-top: 50px;
     margin-bottom: 20px;
   }
-  #first .top_text_item2 {
+  #old .top_text_item2 {
     width: 600px;
   }
-  #first h3 {
+  #old h3 {
     font-size: 2em;
     border-bottom: sorid 7px;
   }
-  #first h2 {
+  #old h2 {
     font-size: 3.5em;
     line-height: 65%;
     border-bottom: solid 8px;
   }
-  #first #page-top {
+  #old #page-top {
     font-size: 140%;
     bottom: 50px;
     right: 25px;
     border-top: solid 0.2rem;
   }
-  #first #page-top::before {
+  #old #page-top::before {
     border-top: solid 0.2rem;
     left: 0;
     width: 20px;
