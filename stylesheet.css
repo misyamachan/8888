@@ -1,3 +1,125 @@
+@charset "UTF-8";
+/*---------------------
+Reset
+---------------------*/
+/*
+  Josh's Custom CSS Resethttps://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*---------------------
+all
+---------------------*/
+html {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a:active {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+ul,
+ol,
+dl,
+dt,
+dd,
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*---------------------
+font-size
+---------------------*/
+/* base 18px */
+html {
+  font-size: 18px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+/*---------------------
+font-family
+---------------------*/
+/* 欧フォント→和フォント指定で混植 */
+body {
+  font-family: "Avenir", "ヒラギノ角ゴシック", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+  color: #333;
+}
+
 /*---------------------
     openbtn
     ---------------------*/
