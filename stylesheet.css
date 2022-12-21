@@ -122,7 +122,6 @@ body {
   display: none;
 }
 .drawer-open {
-  background: #fcc;
   display: flex;
   height: 60px;
   width: 60px;
@@ -140,7 +139,7 @@ body {
   height: 3px;
   width: 25px;
   border-radius: 3px;
-  background: #333;
+  background: white;
   transition: 0.4s;
   position: absolute;
 }
@@ -169,7 +168,7 @@ body {
     g-nav
     ---------------------*/
 #g-nav {
-  background: #fcc;
+  background: rgba(51, 51, 51, 0.9);
   position: fixed;
   z-index: 98;
   opacity: 0;
@@ -198,10 +197,24 @@ body {
 
 .Header .SP-header {
   display: none;
+  height: 60px;
 }
 @media screen and (max-width: 767px) {
   .Header .SP-header {
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+  }
+  .Header .SP-header .Logo {
+    display: block;
+    height: 60px;
+    width: 190px;
+  }
+  .Header .SP-header .Logo__img {
+    height: inherit;
   }
 }
 .Header .PC-header {
@@ -306,6 +319,12 @@ body {
 }
 #index .Containar {
   margin: 30px 0 30px 300px;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  #index .Containar {
+    margin: 90px 0;
+  }
 }
 #index .Main {
   max-width: 960px;
