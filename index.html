@@ -24,23 +24,25 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
             type="text/javascript"></script>
 
-        <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body id="index">
+        <a href="#" id="page-top">TOP</a>
         <header class="Header">
             <div class="PC-header">
-                <img src="image/logo.png" alt="" class="Logo">
+                <a href="index.html" class="Logo">
+                    <img src="image/logo.png" alt="" class="Logo__img">
+                </a>
                 <ul class="Index__list">
                     <li class="Index__item Index__title">目次</li>
                     <li class="Index__item">
-                        <a href="#First" class="title1">はじめに</a>
+                        <a href="#First" class="Index__title1">はじめに</a>
                     </li>
                     <li class="Index__item">
-                        <a href="#Realize">12月18日 気づき</a>
+                        <a href="#Realize" class="Index__title2">12月18日 気づき</a>
                     </li>
                     <li class="Index__item">
-                        <a href="#Restart">再認識</a>
+                        <a href="#Restart" class="Index__title2">再認識</a>
                     </li>
                     <li class="Index__item"></li>
                     <li class="Index__item"></li>
@@ -73,9 +75,9 @@
         <div class="Containar">
             <main class="Main">
                 <section class="First" id="First">
-                    <h1 class="First__title Title">はじめに</h1>
+                    <h1 class="Section-title">はじめに</h1>
                     <div class="Realize" id="Realize">
-                        <h2 class="First__subtitle Subtitle">12月18日 気づき</h2>
+                        <h2 class="Subtitle">12月18日 気づき</h2>
                         <p class="First__text-brock-1">──その日私は地元友人Ｍと二人で日比谷クリスマスマーケットに行き素敵なディナーをいただく予定になっていた。</p>
 
                         <div class="Tomo">
@@ -102,11 +104,33 @@
                             きれいなイルミネーションが見られる予約された素敵なクリスマスマーケットとディナー！しかし行く相手のいないと嘆く可愛い女！<span>行くしかない私が一緒に</span></p>
 
                         <div class="Xmas">
-                            <img src="image/アドカレ-0-1.JPG" alt="" class="Xmas__photo">
-                            <p class="Xmas__text--big">わ～！</p>
-                            <img src="image/アドカレ-0-2.PNG" alt="" class="Xmas__photo">
-                            <p class="Xmas__text--big">きれ～！</p>
-                            <img src="image/アドカレ-0-3.PNG" alt="" class="Xmas__photo">
+                            <div class="Xmas__inner">
+                                <div class="Xmas__photo">
+                                    <img src="image/アドカレ-0-1.JPG" alt="" class="Xmas__photo-item">
+                                </div>
+                                <div class="Xmas__photo-coment">
+                                    <p class="Xmas__text--big">わ～！</p>
+                                </div>
+                            </div>
+
+                            <div class="Xmas__inner">
+                                <div class="Xmas__photo-coment">
+                                    <p class="Xmas__text--big">すご～い！</p>
+                                </div>
+                                <div class="Xmas__photo">
+                                    <img src="image/アドカレ-0-2.PNG" alt="" class="Xmas__photo-item">
+                                </div>
+                            </div>
+
+                            <div class="Xmas__inner">
+                                <div class="Xmas__photo">
+                                    <img src="image/アドカレ-0-3.PNG" alt="" class="Xmas__photo-item">
+                                </div>
+                                <div class="Xmas__photo-coment">
+                                    <p class="Xmas__text--big">きれ～い！</p>
+                                </div>
+                            </div>
+                            
                             <div class="Under">
                                 <span class="Under__line"></span>
                                 <span class="Under__corner"></span>
@@ -124,9 +148,8 @@
                         <img src="image/アドカレ-0-4.PNG" alt="">
                         <p class="Restart__text--big">え？つまり今年もうあと2週間しかないじゃん</p>
                         <p class="Restart__text">
-                            父と有馬記念に行くこと以外の予定が何もない人のカレンダー、白すぎないか？<br>
-                            おい！待ってくれよ！みんな！忘年会は！？<br>
-                            おいていかないでくれ！私だけを2022年に！<br>
+                            父と有馬記念に行くこと以外の予定が何もない人のカレンダー、白すぎないか？<span class="Restart__text-ps">（12/22追記：観覧チケットが取れていなかったのでこの予定もなくなりました。南無）</span><br>
+                            おい！待ってくれよ！みんな！おいていかないでくれ！私だけを2022年に！<br>
                             でも気が付いたらあと2週間っ！2週間しかない……っ！
                             <span class="Restart__text--sp">2022年、このまま終わるのか……？</span>
                         </p>

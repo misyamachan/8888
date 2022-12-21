@@ -1,28 +1,44 @@
+@use "../mixin/mixin" as m;
+
 #index {
-    .Header {
-        .SP-header {
-            display: none;
-        }
-
-        .PC-header {
-            display: block;
-            position: fixed;
-            width: 300px;
-            height: 100%;
-            background-color: #333;
-            left: 0;
-            top: 0;
-            color: white;
-        }
-    }
-
     .Containar {
         margin: 30px 0 30px 300px;
     }
 
     .Main {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0 20px;
+        @include m.wrapper-1000;
+    }
+
+    .Xmas {
+        &__inner {
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        &__photo-coment{
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: m.rem(32);
+            font-weight: bold;
+        }
+
+        &__photo {
+            height: inherit;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        &__photo-item{
+            height: inherit;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
     }
 }

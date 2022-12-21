@@ -22,7 +22,7 @@ $(function smoothScroll() {
 
 $(function () {
     // トップに戻る
-    let pagetop = $('#top');
+    let pagetop = $('#page-top');
     pagetop.hide();
 
 

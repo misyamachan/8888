@@ -1,5 +1,6 @@
 @use "./scss/reset";
-@use "./scss/header-nav";
+@use "./scss/parts/header";
+@use "./scss/parts/top-button";
 @use "./scss/page/index";
 @use "./scss/page/old";
 @use "./scss/page/new";
