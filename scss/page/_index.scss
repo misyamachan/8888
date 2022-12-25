@@ -51,12 +51,13 @@
     }
 
     .Dare {
-        @include m.wrapper-860;
+        @include m.wrapper-880;
         @include m.mb-sub;
 
         &__inner {
             display: flex;
             align-items: center;
+            margin-bottom: 30px;
 
             @include m.mq(sp) {
                 flex-direction: column;
@@ -64,17 +65,22 @@
         }
 
         &__left {
-            width: 100%;
+            width: 30%;
             display: flex;
             justify-content: center;
 
             @include m.mq(sp) {
                 margin-bottom: 30px;
+                width: 100%;
             }
         }
 
         &__right {
-            width: 100%;
+            width: 70%;
+
+            @include m.mq(sp) {
+                width: 100%;
+            }
         }
 
         &__list {
@@ -135,6 +141,15 @@
             width: 150px;
         }
 
+        &__movie {
+            color: m.$gr;
+            font-size: m.rem(14);
+
+            &--sp {
+                font-weight: bold;
+            }
+        }
+
     }
 
     .Second {
@@ -152,12 +167,10 @@
         }
     }
 
-    .Realize {
-        @include m.wrapper-860;
-        @include m.mb-sub;
-    }
-
     .Tomo {
+        @include m.wrapper-880;
+        @include m.mb-sub;
+
         &__name {
             font-weight: bold;
             text-align: center;
@@ -316,14 +329,14 @@
             }
 
             &--kao {
-                font-size: m.rem(28);
+                font-size: m.rem(45);
                 font-weight: bold;
             }
         }
     }
 
-    .Xmas {
-        @include m.wrapper-860;
+    .Realize {
+        @include m.wrapper-880;
         @include m.mb-sub;
 
         &__inner {
@@ -384,6 +397,12 @@
                 font-size: m.rem(28);
                 color: #42b83e;
             }
+
+            &--small {
+                color: m.$gr;
+                font-size: m.rem(14);
+                border-bottom: 1px solid m.$gr;
+            }
         }
 
 
@@ -396,7 +415,14 @@
     }
 
     .Restart {
-        @include m.wrapper-860;
+        @include m.wrapper-880;
         @include m.mb-sub;
+
+        &__text {
+            &--sp {
+                color: m.$gr;
+                font-size: m.rem(14);
+            }
+        }
     }
 }

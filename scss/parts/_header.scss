@@ -1,4 +1,5 @@
 @use "../mixin/mixin" as m;
+
 /*---------------------
     openbtn
     ---------------------*/
@@ -62,19 +63,19 @@
     g-nav
     ---------------------*/
 #g-nav {
-    background: rgba(51,51,51,0.9);
+    background: #333;
     position: fixed;
     z-index: 98;
-    opacity: 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    transition: all 0.3s;
+    transition: all 0.6s;
+    transform: translateY(-100%);
 }
 
 #drawer-check:checked~#g-nav {
-    opacity: 1;
+    transform: translateY(0);
 }
 
 #g-nav ul {
@@ -87,6 +88,7 @@
 
 #g-nav li {
     text-align: center;
+    color: white;
 }
 
 .Header {
@@ -101,13 +103,16 @@
             left: 0;
             width: 100%;
             background-color: #333;
-            z-index: 999;
+            z-index: 998;
 
             .Logo {
+                position: relative;
                 display: block;
                 height: 60px;
                 width: 190px;
-                &__img{
+                z-index: 100;
+
+                &__img {
                     height: inherit;
                 }
             }
@@ -124,9 +129,10 @@
         top: 0;
         color: white;
 
-        .Logo{
+        .Logo {
             transition: all 0.3s;
-            @include m.hover{
+
+            @include m.hover {
                 opacity: 0.7;
             }
         }
@@ -138,34 +144,51 @@
         .Index {
             &__list {
                 margin: 30px;
+                line-height: 1.5;
             }
 
             &__title {
                 font-size: m.rem(24);
-                margin-bottom: 15px;
                 font-weight: bold;
             }
 
             &__title1 {
+                display: inline-block;
                 font-size: m.rem(22);
                 color: white;
-                border-bottom: solid 1px transparent;
+                border-bottom: solid 2px transparent;
                 transition: all 0.3s;
+                margin-top: 15px;
+                margin-bottom: 10px;
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    background-color: m.$ye;
+                    height: 15px;
+                    width: 3px;
+                    right: -8px;
+                    bottom: 3px;
+                    transform: rotate(30deg);
+                }
 
                 @include m.hover {
-                    border-bottom: solid 1px white;
+                    border-bottom: solid 2px m.$ye;
                 }
             }
 
             &__title2 {
+                display: inline-block;
                 font-size: m.rem(18);
                 color: white;
-                border-bottom: solid 1px transparent;
+                border-bottom: solid 2px transparent;
                 transition: all 0.3s;
                 margin-left: 30px;
+                margin-bottom: 10px;
 
                 @include m.hover {
-                    border-bottom: solid 1px white;
+                    border-bottom: solid 2px m.$ye;
                 }
             }
         }

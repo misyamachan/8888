@@ -22,14 +22,14 @@ $gr: rgb(194, 194, 194);
     flex-wrap: $wrap;
 }
 
-@mixin wrapper-1000 {
-    max-width: 960px;
+@mixin wrapper-1100 {
+    max-width: 1060px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-@mixin wrapper-860 {
-    max-width: 820px;
+@mixin wrapper-880 {
+    max-width: 840px;
     margin: 0 auto;
     padding: 0 20px;
 }

@@ -14,7 +14,7 @@ $(function smoothScroll() {
         // animateでスムーススクロールを行う
         // 600はスクロール速度で単位はミリ秒
         $("html, body").animate({
-            scrollTop: position
+            scrollTop: position - 30
         }, 600, "swing");
         return false;
     });

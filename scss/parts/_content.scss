@@ -1,7 +1,7 @@
 @use "../mixin/mixin" as m;
 
 .Section-title {
-    @include m.wrapper-1000;
+    @include m.wrapper-1100;
 
     &__text {
         position: relative;
@@ -20,11 +20,11 @@
         border-radius: 25px 0px 0px 25px;
         /*左側の角を丸く*/
 
-        margin-bottom: 30px;
+        margin-bottom: 40px;
 
         @include m.mq(sp) {
             font-size: m.rem(25);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         &:before {
@@ -47,14 +47,13 @@
 }
 
 .Subtitle {
-    @include m.wrapper-860;
+    @include m.wrapper-880;
     font-size: m.rem(28);
     background: linear-gradient(transparent 70%, m.$ye 70%);
     padding-left: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     @include m.mq(sp) {
         font-size: m.rem(24);
-        margin-bottom: 15px;
     }
 }
