@@ -1,17 +1,42 @@
 @use "../mixin/mixin" as m;
 
-@keyframes niji{
-    0%{color: #be1f1f}
-    14%{color: #cc8b1a}
-    28%{color: #beae1b}
-    42%{color: #20884f}
-    56%{color: #216497}
-    70%{color: #1d2088}
-    85%{color: #7c1c73}
-    100%{color: #dd1111}
+@keyframes niji {
+    0% {
+        color: #be1f1f
+    }
+
+    14% {
+        color: #cc8b1a
+    }
+
+    28% {
+        color: #beae1b
+    }
+
+    42% {
+        color: #20884f
+    }
+
+    56% {
+        color: #216497
+    }
+
+    70% {
+        color: #1d2088
+    }
+
+    85% {
+        color: #7c1c73
+    }
+
+    100% {
+        color: #dd1111
+    }
 }
 
 #index {
+    font-size: 16px;
+
     .Containar {
         margin: 30px 0 30px 250px;
         padding-bottom: 30px;
@@ -21,27 +46,35 @@
         }
     }
 
-    .Main {
-        @include m.wrapper-1000;
-    }
-
     .First {
         @include m.mb-section;
+    }
+
+    .Dare {
+        @include m.wrapper-860;
+        @include m.mb-sub;
 
         &__inner {
             display: flex;
             align-items: center;
-            @include m.wrapper-860;
+
+            @include m.mq(sp) {
+                flex-direction: column;
+            }
         }
 
         &__left {
-            width: 30%;
+            width: 100%;
             display: flex;
             justify-content: center;
+
+            @include m.mq(sp) {
+                margin-bottom: 30px;
+            }
         }
 
         &__right {
-            width: 70%;
+            width: 100%;
         }
 
         &__list {
@@ -61,10 +94,13 @@
             padding-left: 15px;
             padding-right: 10px;
 
+            &:first-of-type {
+                padding-top: 10px;
+                border-top: 1px dotted m.$gr;
+            }
+
             &:last-of-type {
-                border-bottom: 0;
                 margin-bottom: 0;
-                padding-bottom: 0;
             }
         }
 
@@ -75,19 +111,22 @@
             padding-bottom: 10px;
             padding-right: 15px;
 
-            &--sp{
-              font-size: m.rem(30);
-              font-weight: bold;
+            &--sp {
+                font-size: m.rem(30);
+                font-weight: bold;
             }
 
-            &--niji{
+            &--niji {
                 animation: 5s niji linear infinite;
             }
 
+            &:first-of-type {
+                padding-top: 10px;
+                border-top: 1px dotted m.$gr;
+            }
+
             &:last-of-type {
-                border-bottom: 0;
                 margin-bottom: 0;
-                padding-bottom: 0;
             }
         }
 
@@ -98,12 +137,207 @@
 
     }
 
-    .Xmas {
+    .Second {
+        @include m.mb-section;
+
+        &__text-block-1 {
+            margin-bottom: 55px;
+        }
+
+        &__text-block-2 {
+            &--sp {
+                font-weight: bold;
+                font-size: m.rem(20);
+            }
+        }
+    }
+
+    .Realize {
+        @include m.wrapper-860;
+        @include m.mb-sub;
+    }
+
+    .Tomo {
+        &__name {
+            font-weight: bold;
+            text-align: center;
+            font-size: m.rem(22);
+
+            @include m.mq(sp) {
+                margin-bottom: 15px;
+            }
+        }
+
         &__inner {
-            height: 400px;
+            display: flex;
+            margin-bottom: 15px;
+
+            @include m.mq(sp) {
+                flex-direction: column;
+            }
+        }
+
+        &__left {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include m.mq(sp) {
+                width: 100%;
+            }
+        }
+
+        &__circle {
+            width: 150px;
+            height: 150px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        &__m {
+            font-size: m.rem(60);
+            font-weight: bold;
+            color: m.$ye;
+            display: inline;
+        }
+
+        &__right {
+            width: 70%;
+
+            @include m.mq(sp) {
+                width: 100%;
+            }
+        }
+
+        &__item {
+            padding: 0 10px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px dotted m.$gr;
+            position: relative;
+
+            &::before {
+                content: '・';
+                position: absolute;
+            }
+
+            &:first-child {
+                padding-top: 10px;
+                border-top: 1px dotted m.$gr;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__text {
+            padding-left: 20px;
+        }
+
+        &__qa {
+            margin: 30px auto 55px auto;
+            font-size: m.rem(20);
+
+            @include m.mq(sp) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__q {
+            margin-bottom: 10px;
+            margin-left: 20px;
+            position: relative;
+
+            @include m.mq(sp) {
+                margin-left: 0;
+            }
+
+            &::before {
+                content: 'Q.';
+                font-weight: bold;
+                font-size: m.rem(40);
+                margin-right: 5px;
+                color: #3f79a5;
+
+                @include m.mq(sp) {
+                    margin-left: 5px;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: '';
+                max-width: 350px;
+                width: 100%;
+                height: 2px;
+                background-color: #3f79a5;
+            }
+        }
+
+        &__a {
+            text-align: right;
+            position: relative;
+            margin-right: 20px;
+            margin-bottom: 15px;
+
+            @include m.mq(sp) {
+                margin-right: 0;
+            }
+
+            &::before {
+                content: 'A.';
+                font-weight: bold;
+                font-size: m.rem(40);
+                margin-right: 5px;
+                color: #b83e3e;
+
+                @include m.mq(sp) {
+                    margin-left: 5px;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                content: '';
+                max-width: 350px;
+                width: 100%;
+                height: 2px;
+                background-color: #b83e3e;
+            }
+
+            &--kao {
+                font-size: m.rem(28);
+                font-weight: bold;
+            }
+        }
+    }
+
+    .Xmas {
+        @include m.wrapper-860;
+        @include m.mb-sub;
+
+        &__inner {
             display: flex;
             justify-content: center;
             margin: 30px auto;
+
+            @include m.mq(sp) {
+                flex-direction: column;
+
+                &--reverse {
+                    flex-direction: column-reverse;
+                }
+            }
         }
 
         &__photo-coment {
@@ -115,11 +349,17 @@
             justify-content: center;
             font-size: m.rem(32);
             font-weight: bold;
+            margin: 0 auto;
+
+            @include m.mq(sp) {
+                margin-top: 20px;
+            }
         }
 
         &__photo {
-            height: inherit;
+            height: 400px;
             max-width: 350px;
+            margin: 0 auto;
             width: 100%;
         }
 
@@ -129,17 +369,34 @@
             object-fit: cover;
             border-radius: 20px;
         }
+
+        &__text {
+            &--big {
+                font-weight: bold;
+            }
+
+            &--red {
+                font-size: m.rem(28);
+                color: #b83e3e;
+            }
+
+            &--green {
+                font-size: m.rem(28);
+                color: #42b83e;
+            }
+        }
+
+
     }
 
-    .Second {
-        @include m.mb-section;
-    }
-
-    .Realize {
-        @include m.wrapper-860;
+    .Under {
+        &__line::before {
+            content: '';
+        }
     }
 
     .Restart {
         @include m.wrapper-860;
+        @include m.mb-sub;
     }
 }

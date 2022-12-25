@@ -34,15 +34,24 @@ $gr: rgb(194, 194, 194);
     padding: 0 20px;
 }
 
-@mixin mb-section{
+@mixin mb-section {
     margin-bottom: 80px;
-    @include mq(sp){
-        margin-bottom: 40px;
+
+    @include mq(sp) {
+        margin-bottom: 60px;
     }
 }
 
-@mixin hover{
-    @media(hover:hover){
+@mixin mb-sub {
+    margin-bottom: 60px;
+
+    @include mq(sp) {
+        margin-bottom: 45px;
+    }
+}
+
+@mixin hover {
+    @media(hover:hover) {
         &:hover {
             @content;
         }
@@ -52,7 +61,7 @@ $gr: rgb(194, 194, 194);
 
 
 // rem変換
-@function rem($size,$base: 18){
+@function rem($size, $base: 18) {
     $value: calc($size/$base)*1rem;
     @return $value;
 }
