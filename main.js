@@ -25,8 +25,6 @@ $(function () {
     let pagetop = $('#page-top');
     pagetop.hide();
 
-
-
     // 700pxスクロールしたら表示
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -35,8 +33,6 @@ $(function () {
             pagetop.fadeOut();
         }
     });
-
-
 
     pagetop.on('click', function () {
         $('body,html').animate({ scrollTop: 0 }, 500);

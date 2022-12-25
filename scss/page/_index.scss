@@ -1,17 +1,101 @@
 @use "../mixin/mixin" as m;
 
+@keyframes niji{
+    0%{color: #be1f1f}
+    14%{color: #cc8b1a}
+    28%{color: #beae1b}
+    42%{color: #20884f}
+    56%{color: #216497}
+    70%{color: #1d2088}
+    85%{color: #7c1c73}
+    100%{color: #dd1111}
+}
+
 #index {
     .Containar {
-        margin: 30px 0 30px 300px;
+        margin: 30px 0 30px 250px;
         padding-bottom: 30px;
 
-        @include m.mq(sp){
+        @include m.mq(sp) {
             margin: 90px 0;
         }
     }
 
     .Main {
         @include m.wrapper-1000;
+    }
+
+    .First {
+        @include m.mb-section;
+
+        &__inner {
+            display: flex;
+            align-items: center;
+            @include m.wrapper-860;
+        }
+
+        &__left {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__right {
+            width: 70%;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        &__desc-t {
+            width: 40%;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dotted m.$gr;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 10px;
+
+            &:last-of-type {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        &__desc-d {
+            width: 60%;
+            border-bottom: 1px dotted m.$gr;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            padding-right: 15px;
+
+            &--sp{
+              font-size: m.rem(30);
+              font-weight: bold;
+            }
+
+            &--niji{
+                animation: 5s niji linear infinite;
+            }
+
+            &:last-of-type {
+                border-bottom: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        &__img {
+            height: 150px;
+            width: 150px;
+        }
+
     }
 
     .Xmas {
@@ -22,7 +106,7 @@
             margin: 30px auto;
         }
 
-        &__photo-coment{
+        &__photo-coment {
             max-width: 350px;
             width: 100%;
             text-align: center;
@@ -39,11 +123,23 @@
             width: 100%;
         }
 
-        &__photo-item{
+        &__photo-item {
             height: inherit;
             width: 100%;
             object-fit: cover;
             border-radius: 20px;
         }
+    }
+
+    .Second {
+        @include m.mb-section;
+    }
+
+    .Realize {
+        @include m.wrapper-860;
+    }
+
+    .Restart {
+        @include m.wrapper-860;
     }
 }
