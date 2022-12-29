@@ -936,6 +936,9 @@ body {
   font-size: 0.7777777778rem;
   border-bottom: 1px solid rgb(194, 194, 194);
 }
+#index .Realize__kaigyo {
+  display: inline;
+}
 #index .Under {
   height: 100vh;
   position: relative;
