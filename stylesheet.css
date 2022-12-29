@@ -937,7 +937,7 @@ body {
   border-bottom: 1px solid rgb(194, 194, 194);
 }
 #index .Realize__kaigyo {
-  display: inline;
+  display: inline-block;
 }
 #index .Under {
   height: 100vh;
