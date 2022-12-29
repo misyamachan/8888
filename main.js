@@ -14,8 +14,8 @@ $(function smoothScroll() {
         // animateでスムーススクロールを行う
         // 600はスクロール速度で単位はミリ秒
         $("html, body").animate({
-            scrollTop: position - 30
-        }, 600, "swing");
+            scrollTop: position - 80
+        }, 1000, "swing");
         return false;
     });
 })
@@ -27,7 +27,7 @@ $(function () {
 
     // 700pxスクロールしたら表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 700) {
             pagetop.fadeIn();
         } else {
             pagetop.fadeOut();
@@ -35,7 +35,7 @@ $(function () {
     });
 
     pagetop.on('click', function () {
-        $('body,html').animate({ scrollTop: 0 }, 500);
+        $('body,html').animate({ scrollTop: 0 }, 1000);
         return false;
     });
 });

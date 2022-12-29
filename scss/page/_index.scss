@@ -34,11 +34,23 @@
     }
 }
 
-#index {
-    font-size: 16px;
+@keyframes under {
+    0% {
+        transform: translateY(0%);
+    }
 
+    50% {
+        transform: translateY(30%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+#index {
     .Containar {
-        margin: 30px 0 30px 250px;
+        margin: 110px 0 30px 300px;
         padding-bottom: 30px;
 
         @include m.mq(sp) {
@@ -353,7 +365,7 @@
             }
         }
 
-        &__photo-coment {
+        &__photo-comment {
             max-width: 350px;
             width: 100%;
             text-align: center;
@@ -384,17 +396,20 @@
         }
 
         &__text {
+            margin-bottom: 10px;
+
             &--big {
                 font-weight: bold;
+                font-size: m.rem(45);
             }
 
             &--red {
-                font-size: m.rem(28);
+                font-size: m.rem(55);
                 color: #b83e3e;
             }
 
             &--green {
-                font-size: m.rem(28);
+                font-size: m.rem(55);
                 color: #42b83e;
             }
 
@@ -409,19 +424,275 @@
     }
 
     .Under {
+        height: 100vh;
+        position: relative;
+        animation: 5s under ease-in-out infinite;
+
         &__line::before {
+            position: absolute;
             content: '';
+            height: 150px;
+            width: 5px;
+            border-radius: 5px;
+            background-color: #333;
+            top: 255px;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
+
+        &__corner {
+            &::before {
+                content: "";
+                color: #333;
+                display: block;
+                position: absolute;
+                top: 318.75px;
+                right: 50%;
+                width: 34px;
+                border-top: solid 5px;
+                border-radius: 5px;
+                transform: translate(20%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                color: #333;
+                display: block;
+                position: absolute;
+                top: 318.75px;
+                right: 50%;
+                width: 34px;
+                border-top: solid 5px;
+                border-radius: 5px;
+                transform: translate(80%, -50%) rotate(-45deg);
+            }
+        }
+
+
     }
 
     .Restart {
         @include m.wrapper-880;
         @include m.mb-sub;
 
+        &__img {
+            margin-bottom: 30px;
+
+            &--anzai {
+                width: 80%;
+                margin: 30px auto;
+
+                @include m.mq(sp) {
+                    width: 100%;
+                }
+            }
+        }
+
         &__text {
+            margin-bottom: 10px;
+
+            &--big {
+                font-weight: bold;
+                font-size: m.rem(22);
+            }
+
+            &--anzai {
+                font-size: m.rem(35);
+            }
+
             &--sp {
                 color: m.$gr;
                 font-size: m.rem(14);
+            }
+        }
+
+        &__link {
+            color: #333;
+            position: relative;
+            z-index: 5;
+            font-weight: bold;
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background-color: m.$ye;
+                transition: all 0.3s;
+                z-index: -1;
+            }
+
+            @include m.hover {
+                &::before {
+                    height: 100%;
+                }
+
+                &::after {
+                    content: " ←スラムダンクのOP・EDて名曲しかない";
+                    color: #333;
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+    .Third {
+        @include m.mb-section;
+    }
+
+    .Nani {
+        @include m.wrapper-880;
+        @include m.mb-sub;
+
+        &__text {
+            margin-bottom: 10px;
+
+            &--big {
+                font-size: m.rem(25);
+                font-weight: bold;
+            }
+        }
+    }
+
+    .Old {
+        @include m.wrapper-880;
+        @include m.mb-sub;
+
+        &__text {
+            margin-bottom: 10px;
+
+            &--big {
+                font-size: m.rem(25);
+                font-weight: bold;
+            }
+
+            &--sp {
+                color: m.$gr;
+                font-size: m.rem(14);
+            }
+        }
+
+        &__site {
+            margin: 30px 0;
+        }
+    }
+
+    .New {
+        @include m.wrapper-880;
+        @include m.mb-sub;
+
+        &__text {
+            margin-bottom: 10px;
+
+            &--big {
+                font-size: m.rem(25);
+                font-weight: bold;
+            }
+
+            &--sp {
+                color: m.$gr;
+                font-size: m.rem(14);
+            }
+        }
+
+        &__site {
+            margin: 30px 0;
+        }
+    }
+
+    .Fourth {
+        @include m.mb-section;
+    }
+
+    .Bad {
+        @include m.wrapper-880;
+        @include m.mb-sub;
+
+        &__item {
+            list-style: decimal;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed m.$gr;
+            margin-bottom: 20px;
+            margin-left: 20px;
+
+            &:last-of-type {
+                border-bottom: 0;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+
+        }
+
+        &__text-big {
+            font-weight: bold;
+            font-size: m.rem(20);
+        }
+    }
+
+    .Good {
+        @include m.wrapper-880;
+        @include m.mb-sub;
+
+        &__item {
+            list-style: decimal;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed m.$gr;
+            margin-bottom: 20px;
+            margin-left: 20px;
+
+            &:last-of-type {
+                border-bottom: 0;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &__text-big {
+            font-weight: bold;
+            font-size: m.rem(20);
+        }
+    }
+
+    .Last {
+        @include m.wrapper-880;
+        @include m.mb-sub;
+
+        &__text {
+            margin-bottom: 10px;
+        }
+
+        &__link {
+            color: #333;
+            position: relative;
+            z-index: 5;
+            font-weight: bold;
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background-color: m.$ye;
+                transition: all 0.3s;
+                z-index: -1;
+            }
+
+            @include m.hover {
+                &::before {
+                    height: 100%;
+                }
+
+                &::after {
+                    content: " ←マジでいい曲だな";
+                    color: #333;
+                    background-color: white;
+                }
             }
         }
     }

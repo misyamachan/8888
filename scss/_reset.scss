@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "../scss/mixin/mixin" as m;
 
 /*---------------------
 Reset
@@ -23,7 +24,7 @@ body {
 }
 
 body {
-    line-height: 1.7;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -61,10 +62,6 @@ h6 {
 /*---------------------
 all
 ---------------------*/
-html {
-    font-size: 16px;
-}
-
 a {
     text-decoration: none;
 }
