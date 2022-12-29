@@ -43,12 +43,12 @@
 
                     &::before {
                         content: '';
-                        width: 10%;
+                        width: 32px;
                         height: 5px;
                         transform: rotate(45deg) translateY(-190%);
                         position: absolute;
                         bottom: -28px;
-                        right: 97.5px;
+                        right: 99px;
                         background-color: white;
                         border-radius: 3px;
                         box-shadow: 1px 1px 1px black;
@@ -57,7 +57,7 @@
 
                     &::after {
                         content: '';
-                        width: 70%;
+                        width: 225px;
                         height: 5px;
                         position: absolute;
                         background-color: white;
@@ -74,21 +74,26 @@
                     left: 40px;
 
                     &::before {
+                        width: 24px;
                         bottom: -30px;
                         right: 77px;
+                    }
+
+                    &::after {
+                        width: 169px;
                     }
                 }
             }
 
             &--2 {
-                bottom: 130px;
+                bottom: 160px;
                 right: 60px;
                 font-size: m.rem(300);
                 font-weight: bold;
 
                 @include m.mq(pc) {
                     font-size: m.rem(200);
-                    bottom: 80px;
+                    bottom: 45px;
                 }
 
                 @include m.mq(sp) {

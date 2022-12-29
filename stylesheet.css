@@ -1409,12 +1409,12 @@ body {
   }
   #new .Mv__text--1::before {
     content: "";
-    width: 10%;
+    width: 32px;
     height: 5px;
     transform: rotate(45deg) translateY(-190%);
     position: absolute;
     bottom: -28px;
-    right: 97.5px;
+    right: 99px;
     background-color: white;
     border-radius: 3px;
     box-shadow: 1px 1px 1px black;
@@ -1422,7 +1422,7 @@ body {
   }
   #new .Mv__text--1::after {
     content: "";
-    width: 70%;
+    width: 225px;
     height: 5px;
     position: absolute;
     background-color: white;
@@ -1439,12 +1439,16 @@ body {
     left: 40px;
   }
   #new .Mv__text--1::before {
+    width: 24px;
     bottom: -30px;
     right: 77px;
   }
+  #new .Mv__text--1::after {
+    width: 169px;
+  }
 }
 #new .Mv__text--2 {
-  bottom: 130px;
+  bottom: 160px;
   right: 60px;
   font-size: 16.6666666667rem;
   font-weight: bold;
@@ -1452,7 +1456,7 @@ body {
 @media screen and (max-width: 1500px) {
   #new .Mv__text--2 {
     font-size: 11.1111111111rem;
-    bottom: 80px;
+    bottom: 45px;
   }
 }
 @media screen and (max-width: 750px) {
