@@ -126,7 +126,12 @@
 }
 
 #new .SP-header {
-    background-color: transparent;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
+
+    .drawer-open {
+        background-color: black;
+    }
 
     #g-nav {
         background-color: black;
@@ -180,7 +185,9 @@
 }
 
 #new .PC-header-top {
-    background-color: transparent;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%,
+            rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%, );
 
     nav {
         a {

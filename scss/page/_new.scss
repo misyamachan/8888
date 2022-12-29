@@ -2,6 +2,7 @@
 
 #new {
     background-color: black;
+    color: white;
 
     img {
         overflow-x: hidden;
@@ -25,7 +26,6 @@
 
         &__text {
             position: absolute;
-            color: white;
             line-height: 0.8;
 
             @include m.mq(sp) {
@@ -40,11 +40,6 @@
 
                 @include m.mq(pc) {
                     font-size: m.rem(200);
-                }
-
-                @include m.mq(sp) {
-                    font-size: m.rem(150);
-                    left: 40px;
 
                     &::before {
                         content: '';
@@ -52,11 +47,12 @@
                         height: 5px;
                         transform: rotate(45deg) translateY(-190%);
                         position: absolute;
-                        bottom: -30px;
-                        right: 77px;
+                        bottom: -28px;
+                        right: 97.5px;
                         background-color: white;
                         border-radius: 3px;
                         box-shadow: 1px 1px 1px black;
+                        z-index: 800;
                     }
 
                     &::after {
@@ -69,18 +65,30 @@
                         left: 0;
                         border-radius: 3px;
                         box-shadow: 1px 1px 1px black;
+                        z-index: 800;
+                    }
+                }
+
+                @include m.mq(sp) {
+                    font-size: m.rem(150);
+                    left: 40px;
+
+                    &::before {
+                        bottom: -30px;
+                        right: 77px;
                     }
                 }
             }
 
             &--2 {
-                bottom: 100px;
+                bottom: 130px;
                 right: 60px;
                 font-size: m.rem(300);
                 font-weight: bold;
 
                 @include m.mq(pc) {
                     font-size: m.rem(200);
+                    bottom: 80px;
                 }
 
                 @include m.mq(sp) {
@@ -110,7 +118,7 @@
 
         }
 
-        @include m.mq(sp) {
+        @include m.mq(pc) {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
 
@@ -131,7 +139,67 @@
             }
 
             &__inner {
-                min-width: 1000px;
+                min-width: 1500px;
+            }
+
+            @include m.mq(sp) {
+                &__inner {
+                    min-width: 1000px;
+                }
+            }
+
+        }
+    }
+
+    .Haco {
+        position: relative;
+        text-align: center;
+
+        &__inner {
+            display: inline-block;
+            position: relative;
+        }
+
+        &__img {
+            display: inline;
+            max-height: 900px;
+        }
+
+        &__text-1 {
+            font-size: m.rem(40);
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            position: absolute;
+            top: -10px;
+            right: 5px;
+        }
+
+        &__text-2 {
+            font-size: m.rem(40);
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            letter-spacing: 0.1em;
+            position: absolute;
+            top: 40px;
+            right: 0;
+        }
+
+        &__text-3 {
+            position: absolute;
+            padding: 20px 20px;
+            max-width: 320px;
+            bottom: 150px;
+            left: -100px;
+            text-shadow: 1px 1px 2px black;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+
+
+            @include m.mq(sp) {
+                position: static;
+                margin: 0 auto;
+                padding-top: 0;
+                max-width: 450px;
             }
         }
     }
