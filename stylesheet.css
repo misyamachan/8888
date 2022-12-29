@@ -1116,6 +1116,7 @@ body {
 #index .New__text--sp {
   color: rgb(194, 194, 194);
   font-size: 0.7777777778rem;
+  display: inline-block;
 }
 #index .New__site {
   margin: 30px 0;
