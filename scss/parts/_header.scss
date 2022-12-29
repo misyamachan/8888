@@ -125,6 +125,14 @@
     }
 }
 
+#new .SP-header {
+    background-color: transparent;
+
+    #g-nav {
+        background-color: black;
+    }
+}
+
 .PC-header-top {
     display: flex;
     justify-content: space-between;
@@ -164,6 +172,21 @@
 
     @include m.mq(sp) {
         display: none;
+    }
+}
+
+#index .PC-header-top {
+    background-color: transparent;
+}
+
+#new .PC-header-top {
+    background-color: transparent;
+
+    nav {
+        a {
+            color: white;
+            border-bottom: 2px solid white;
+        }
     }
 }
 

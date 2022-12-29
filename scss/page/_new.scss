@@ -1,3 +1,138 @@
-#new{
-    
+@use "../mixin/mixin" as m;
+
+#new {
+    background-color: black;
+
+    img {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .Mv {
+        overflow-x: hidden;
+        overflow-y: hidden;
+
+        &__inner {
+            position: relative;
+        }
+
+        &__img {
+            shape-outside: url(image\アドカレ-1.png);
+            width: 100%;
+            position: relative;
+            z-index: 800;
+        }
+
+        &__text {
+            position: absolute;
+            color: white;
+            line-height: 0.8;
+
+            @include m.mq(sp) {
+                z-index: 900;
+            }
+
+            &--1 {
+                top: 100px;
+                left: 60px;
+                font-size: m.rem(300);
+                font-weight: bold;
+
+                @include m.mq(pc) {
+                    font-size: m.rem(200);
+                }
+
+                @include m.mq(sp) {
+                    font-size: m.rem(150);
+                    left: 40px;
+
+                    &::before {
+                        content: '';
+                        width: 10%;
+                        height: 5px;
+                        transform: rotate(45deg) translateY(-190%);
+                        position: absolute;
+                        bottom: -30px;
+                        right: 77px;
+                        background-color: white;
+                        border-radius: 3px;
+                        box-shadow: 1px 1px 1px black;
+                    }
+
+                    &::after {
+                        content: '';
+                        width: 70%;
+                        height: 5px;
+                        position: absolute;
+                        background-color: white;
+                        bottom: -30px;
+                        left: 0;
+                        border-radius: 3px;
+                        box-shadow: 1px 1px 1px black;
+                    }
+                }
+            }
+
+            &--2 {
+                bottom: 100px;
+                right: 60px;
+                font-size: m.rem(300);
+                font-weight: bold;
+
+                @include m.mq(pc) {
+                    font-size: m.rem(200);
+                }
+
+                @include m.mq(sp) {
+                    font-size: m.rem(150);
+                    right: 40px;
+                }
+            }
+
+            &--3 {
+                font-size: m.rem(30);
+                font-weight: bold;
+                z-index: 900;
+                line-height: 1.5;
+                right: 0;
+                letter-spacing: 0.1em;
+                transform: translateY(-150%);
+                text-shadow: 1px 1px 2px black;
+
+                @include m.mq(pc) {
+                    font-size: m.rem(22);
+                }
+
+                @include m.mq(sp) {
+                    font-size: m.rem(20);
+                }
+            }
+
+        }
+
+        @include m.mq(sp) {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+
+            &::-webkit-scrollbar {
+                height: 5px;
+                background-color: black;
+                color: black;
+            }
+
+            &::-webkit-scrollbar-track {
+                color: black;
+                background-color: black;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                color: black;
+                background-color: black;
+            }
+
+            &__inner {
+                min-width: 1000px;
+            }
+        }
+    }
 }

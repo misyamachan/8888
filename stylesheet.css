@@ -225,6 +225,13 @@ body {
   }
 }
 
+#new .SP-header {
+  background-color: transparent;
+}
+#new .SP-header #g-nav {
+  background-color: black;
+}
+
 .PC-header-top {
   display: flex;
   justify-content: space-between;
@@ -261,6 +268,18 @@ body {
   .PC-header-top {
     display: none;
   }
+}
+
+#index .PC-header-top {
+  background-color: transparent;
+}
+
+#new .PC-header-top {
+  background-color: transparent;
+}
+#new .PC-header-top nav a {
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 .PC-header {
@@ -1341,5 +1360,134 @@ body {
     font-size: 3.5em;
     line-height: 65%;
     border-bottom: solid 8px;
+  }
+}
+#new {
+  background-color: black;
+}
+#new img {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#new .Mv {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#new .Mv__inner {
+  position: relative;
+}
+#new .Mv__img {
+  shape-outside: url(imageアドカレ-1.png);
+  width: 100%;
+  position: relative;
+  z-index: 800;
+}
+#new .Mv__text {
+  position: absolute;
+  color: white;
+  line-height: 0.8;
+}
+@media screen and (max-width: 800px) {
+  #new .Mv__text {
+    z-index: 900;
+  }
+}
+#new .Mv__text--1 {
+  top: 100px;
+  left: 60px;
+  font-size: 16.6666666667rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 1500px) {
+  #new .Mv__text--1 {
+    font-size: 11.1111111111rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  #new .Mv__text--1 {
+    font-size: 8.3333333333rem;
+    left: 40px;
+  }
+  #new .Mv__text--1::before {
+    content: "";
+    width: 10%;
+    height: 5px;
+    transform: rotate(45deg) translateY(-190%);
+    position: absolute;
+    bottom: -30px;
+    right: 77px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px black;
+  }
+  #new .Mv__text--1::after {
+    content: "";
+    width: 70%;
+    height: 5px;
+    position: absolute;
+    background-color: white;
+    bottom: -30px;
+    left: 0;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px black;
+  }
+}
+#new .Mv__text--2 {
+  bottom: 100px;
+  right: 60px;
+  font-size: 16.6666666667rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 1500px) {
+  #new .Mv__text--2 {
+    font-size: 11.1111111111rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  #new .Mv__text--2 {
+    font-size: 8.3333333333rem;
+    right: 40px;
+  }
+}
+#new .Mv__text--3 {
+  font-size: 1.6666666667rem;
+  font-weight: bold;
+  z-index: 900;
+  line-height: 1.5;
+  right: 0;
+  letter-spacing: 0.1em;
+  transform: translateY(-150%);
+  text-shadow: 1px 1px 2px black;
+}
+@media screen and (max-width: 1500px) {
+  #new .Mv__text--3 {
+    font-size: 1.2222222222rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  #new .Mv__text--3 {
+    font-size: 1.1111111111rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  #new .Mv {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  #new .Mv::-webkit-scrollbar {
+    height: 5px;
+    background-color: black;
+    color: black;
+  }
+  #new .Mv::-webkit-scrollbar-track {
+    color: black;
+    background-color: black;
+  }
+  #new .Mv::-webkit-scrollbar-thumb {
+    color: black;
+    background-color: black;
+  }
+  #new .Mv__inner {
+    min-width: 1000px;
   }
 }/*# sourceMappingURL=stylesheet.css.map */
