@@ -3,7 +3,7 @@ $(function smoothScroll() {
     スムーススクロール
     ===================================================*/
     // ページ内のリンクをクリックした時に動作する
-    $('a[href^="#"]:not(.menu-nav a)').click(function () {
+    $('a[href^="#"]').click(function () {
         // リンクを取得
         let href = $(this).attr("href");
         console.log(href);
@@ -37,5 +37,53 @@ $(function () {
     pagetop.on('click', function () {
         $('body,html').animate({ scrollTop: 0 }, 1000);
         return false;
+    });
+});
+
+window.addEventListener("load", function () {
+
+    //プラグインを定義
+    gsap.registerPlugin(ScrollTrigger);
+
+    const area = document.querySelector(".js-area");
+    const wrap = document.querySelector('.js-wrap');
+    const items = document.querySelector('.js-item');
+
+    gsap.to(items, {
+        x: () => -(items.clientWidth - wrap.clientWidth), //x方向に移動させる
+        ease: "none",
+        scrollTrigger: {
+            trigger: area, //トリガー
+            start: "top top", //開始位置
+            end: () => `+=${items.clientWidth - wrap.clientWidth}`, //終了位置
+            pin: true, //ピン留め
+            scrub: true, //スクロール量に応じて動かすがこれがないと横スクロールが一気に終わる
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+        }
+    });
+});
+
+window.addEventListener("load", function () {
+
+    //プラグインを定義
+    gsap.registerPlugin(ScrollTrigger);
+
+    const area = document.querySelector(".js-area2");
+    const wrap = document.querySelector('.js-wrap2');
+    const items = document.querySelector('.js-item2');
+
+    gsap.to(items, {
+        x: () => -(items.clientWidth - wrap.clientWidth), //x方向に移動させる
+        ease: "none",
+        scrollTrigger: {
+            trigger: area, //トリガー
+            start: "top top", //開始位置
+            end: () => `+=${items.clientWidth - wrap.clientWidth}`, //終了位置
+            pin: true, //ピン留め
+            scrub: true, //スクロール量に応じて動かすがこれがないと横スクロールが一気に終わる
+            anticipatePin: 1,
+            invalidateOnRefresh: true,
+        }
     });
 });
