@@ -1642,7 +1642,7 @@ body {
   letter-spacing: 0.25em;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
-  text-shadow: 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black, 0 1px black, 1px 0 black, 0 -1px black, -1px 0 black;
+  text-shadow: 1px 1px black;
   font-weight: bold;
   font-size: 1.1111111111rem;
 }
