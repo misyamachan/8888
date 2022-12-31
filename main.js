@@ -57,7 +57,7 @@ $(function () {
         // 処理①
         setTimeout(function () {
             show_txt();
-        }, 1000)
+        }, 0)
         // 処理②
         setTimeout(function () {
             hide_txt();
