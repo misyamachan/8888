@@ -1408,8 +1408,11 @@ body {
 }
 #new .Mv__img {
   width: 100%;
+  min-height: 100vh;
   position: relative;
   z-index: 800;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #new .Mv__text {
   position: absolute;
@@ -1514,7 +1517,7 @@ body {
     -webkit-overflow-scrolling: touch;
   }
   #new .Mv::-webkit-scrollbar {
-    height: 5px;
+    height: 0px;
     background-color: black;
     color: black;
   }
@@ -1697,6 +1700,8 @@ body {
 @media screen and (max-width: 1500px) {
   #new .Bv {
     min-height: initial;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 #new .Bv__inner {

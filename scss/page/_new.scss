@@ -39,8 +39,10 @@
 
         &__img {
             width: 100%;
+            min-height: 100vh;
             position: relative;
             z-index: 800;
+            object-fit: cover;
         }
 
         &__text {
@@ -147,7 +149,7 @@
             -webkit-overflow-scrolling: touch;
 
             &::-webkit-scrollbar {
-                height: 5px;
+                height: 0px;
                 background-color: black;
                 color: black;
             }
@@ -356,6 +358,8 @@
 
         @include m.mq(pc) {
             min-height: initial;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         &__inner {
