@@ -65,7 +65,7 @@ $(function () {
         // 処理③
         setTimeout(function () {
             end_loader();
-        }, 2500)
+        }, 3500)
     });
 });
 
