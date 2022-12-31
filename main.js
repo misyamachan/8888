@@ -53,7 +53,7 @@ $(function () {
     };
 
     // タイマー処理
-    $(window).on('load', function () {
+    $(window).ready(function () {
         // 処理①
         setTimeout(function () {
             show_txt();
