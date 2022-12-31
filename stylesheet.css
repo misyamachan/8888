@@ -1375,6 +1375,21 @@ body {
   background-color: black;
   color: white;
 }
+#new .Load {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#new .Load img {
+  display: none;
+}
 #new .Section-title-new {
   margin-bottom: 50px;
   text-align: center;
