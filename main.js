@@ -61,11 +61,11 @@ $(function () {
         // 処理②
         setTimeout(function () {
             hide_txt();
-        }, 1500)
+        }, 3500)
         // 処理③
         setTimeout(function () {
             end_loader();
-        }, 3000)
+        }, 4500)
     });
 });
 
